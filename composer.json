@@ -1,22 +1,26 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "bitvalencia/laravel-helpers",
+    "description": "Global helpers for Laravel projects",
     "keywords": [
-        "spatie",
-        ":package_name"
+        "bitvalencia",
+        "laravel-helpers",
+        "laravel",
+        "helpers"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/bitvalencia/laravel-helpers",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
+            "name": "Iván García",
+            "email": "ivan@bitvalencia.com",
+            "homepage": "https://github.com/ivang11",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "illuminate/support": "^6.0|^7.0",
+        "illuminate/validation": "^6.0|^7.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
@@ -26,13 +30,13 @@
         "vimeo/psalm": "^3.11"
     },
     "autoload": {
-        "psr-4": {
-            "Spatie\\Skeleton\\": "src"
-        }
+        "files": [
+            "src/Helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,16 +47,6 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
-            }
-        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
